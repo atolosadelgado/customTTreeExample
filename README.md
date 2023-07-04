@@ -38,4 +38,5 @@ If for example `std::vector` of such class is also used in the TTree as well, it
 #pragma link C++ class std::vector<myFancyClass>+;
 ```
 
-
+# Links: 
+* ROOT documentation: https://root.cern/manual/io_custom_classes/
