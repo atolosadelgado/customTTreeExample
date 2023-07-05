@@ -44,7 +44,7 @@ ROOT_GENERATE_DICTIONARY(G__data2Tree data2Tree.hpp LINKDEF data2TreeLinkDef.hpp
 #---Create a shared library from
 #   * the previously generated dictionary, G__data2Tree.cxx
 #   * the class implementation
-add_library(data2TreeLib SHARED data2Tree.cxx G__data2Tree.cxx)
+add_library(data2TreeLib SHARED data2Tree.cpp G__data2Tree.cxx)
 target_link_libraries(data2TreeLib ${ROOT_LIBRARIES}  ) 
 
 #---Create  a main program using the library
