@@ -11,20 +11,17 @@
 
 #include <vector>
 
-class myDetectorData
-{
+class myDetectorData {
 public:
-  
-  //-- Example of method...
-  void clear();
-  
-  //-- Class members
-  //-- initialized by construction, C++11
-  double time = 1;
-  double energy = 2;
-  int detectorID = 3;
-  std::vector<double> correlatedDetectors_v = {1,2,3};
-};
+   //-- Example of method...
+   void clear();
 
+   //-- Class members
+   //-- initialized by construction, C++11
+   double time = 1;
+   double energy = 2;
+   int detectorID = 3;
+   std::vector<double> correlatedDetectors_v = {1, 2, 3};
+};
 
 #endif

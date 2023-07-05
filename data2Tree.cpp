@@ -11,9 +11,9 @@
 
 void myDetectorData::clear()
 {
-    time = 0;
-    energy = 0;
-    detectorID = 0;
-    correlatedDetectors_v.clear();
-    return;
+   time = 0;
+   energy = 0;
+   detectorID = 0;
+   correlatedDetectors_v.clear();
+   return;
 }

@@ -8,13 +8,13 @@
 
 int main()
 {
-  std::cerr << "Starting writeTree()..." << std::endl;
-  writeTree();
-  std::cerr << "Starting writeTree()... Done! " << std::endl;
-  
-  std::cerr << "Starting readTree()..." << std::endl;
-  readTree();
-  std::cerr << "Starting readTree()... Done! " << std::endl;
+   std::cerr << "Starting writeTree()..." << std::endl;
+   writeTree();
+   std::cerr << "Starting writeTree()... Done! " << std::endl;
 
-  return 0;
+   std::cerr << "Starting readTree()..." << std::endl;
+   readTree();
+   std::cerr << "Starting readTree()... Done! " << std::endl;
+
+   return 0;
 }
