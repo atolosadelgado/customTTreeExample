@@ -11,7 +11,7 @@
 
 #include <vector>
 
-class myFancyClass
+class myDetectorData
 {
 public:
   
@@ -20,10 +20,10 @@ public:
   
   //-- Class members
   //-- initialized by construction, C++11
-  double kk1 = 1;
-  double kk2 = 2;
-  double kk3 = 3;
-  std::vector<double> kk4_v = {1,2,3};
+  double time = 1;
+  double energy = 2;
+  int detectorID = 3;
+  std::vector<double> correlatedDetectors_v = {1,2,3};
 };
 
 

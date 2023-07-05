@@ -9,11 +9,11 @@
 #include "data2Tree.hpp"
 #include <iostream>
 
-void myFancyClass::clear()
+void myDetectorData::clear()
 {
-    kk1 = 0;
-    kk2 = 0;
-    kk3 = 0;
-    kk4_v.clear();
+    time = 0;
+    energy = 0;
+    detectorID = 0;
+    correlatedDetectors_v.clear();
     return;
 }

@@ -26,20 +26,20 @@ void readTree()
     std::cerr << " File not found " << std::endl;
     return;
   }
-  if( ! TClass::GetClass(typeid(myFancyClass))->IsLoaded() )  
+  if( ! TClass::GetClass(typeid(myDetectorData))->IsLoaded() )
   {
 	std::cerr << " TClass::GetClass(typeid(std::string))->IsLoaded() == false " << std::endl;
   }
   TTreeReader aReader( "myTree", ifile );
-  TTreeReaderValue <myFancyClass>  branch1 (aReader, "branch1.");
-  TTreeReaderValue <myFancyClass>  branch2 (aReader, "branch2.");
+  TTreeReaderValue <myDetectorData>  branch1 (aReader, "branch1.");
+  TTreeReaderValue <myDetectorData>  branch2 (aReader, "branch2.");
   
   while( aReader.Next() )
   {
-    if( branch1->kk1 != 0 )
-      std::cerr << " -Branch1 : kk1: " << branch1->kk1 << " kk2: " << branch1->kk1 << std::endl;
-    else if( branch2->kk1 != 0 )
-      std::cerr << " +Branch2 : kk1: " << branch2->kk1 << " kk2: " << branch2->kk1 << std::endl;
+    if( branch1->time != 0 )
+      std::cerr << " -Branch1 : time: " << branch1->time << "\t energy: " << branch1->energy << std::endl;
+    else if( branch2->time != 0 )
+      std::cerr << " +Branch2 : time: " << branch2->time << "\t energy: " << branch2->energy << std::endl;
     else
       std::cerr << "WARNING: entry " << aReader.GetCurrentEntry() << " is empty! " << std::endl;
     

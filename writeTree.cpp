@@ -27,10 +27,10 @@ void writeTree()
     return;
   }
   TTree * myTree = new TTree( "myTree" , "" );
-  myFancyClass obj_for_branch1;
+  myDetectorData obj_for_branch1;
   myTree->Branch("branch1.", &obj_for_branch1);
   
-  myFancyClass obj_for_branch2;
+  myDetectorData obj_for_branch2;
   myTree->Branch("branch2.", &obj_for_branch2);
   
   for( int i = 0; i< 10; ++i)
@@ -39,9 +39,9 @@ void writeTree()
     if( i % 2 == 0 )
     {
       obj_for_branch1.clear();
-      obj_for_branch2.kk1 = i  +5;
-      obj_for_branch2.kk2 = 2*i+5;
-      obj_for_branch2.kk3 = 3*i+5;
+      obj_for_branch2.time = i  +5;
+      obj_for_branch2.energy = 2*i+5;
+      obj_for_branch2.detectorID = 3*i+5;
       myTree->Fill();
       
     }
@@ -49,9 +49,9 @@ void writeTree()
     else
     {
       obj_for_branch2.clear();
-      obj_for_branch1.kk1 = i  +1;
-      obj_for_branch1.kk2 = 2*i+1;
-      obj_for_branch1.kk3 = 3*i+1;
+      obj_for_branch1.time = i  +1;
+      obj_for_branch1.energy = 2*i+1;
+      obj_for_branch1.detectorID = 3*i+1;
       myTree->Fill();      
     }
     

@@ -9,7 +9,7 @@
 
 #ifdef __CLING__
 
-#pragma link C++ class myFancyClass+;
+#pragma link C++ class myDetectorData+;
 
 #endif
 
