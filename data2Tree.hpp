@@ -3,6 +3,9 @@
 // # Copyright (c) 2018 Alvaro Tolosa. All rights reserved.		 #
 // ##########################################################################
 
+// This file declares a class, with some members and method
+// The definition of the method is done in the corresponding .cpp file
+
 #ifndef __data2Tree__
 #define __data2Tree__
 
@@ -11,14 +14,8 @@
 class myFancyClass
 {
 public:
-  //-- Default constructor
-  myFancyClass();
-  //-- Default destructor
-  ~myFancyClass();
-  //-- Default copy constructor
-  myFancyClass(myFancyClass const & i);
   
-  //-- Other functions...
+  //-- Example of method...
   void clear();
   
   //-- Class members
