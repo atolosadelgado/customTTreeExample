@@ -10,18 +10,26 @@
 #define __data2Tree__
 
 #include <vector>
+#include <random>
+#include <algorithm>
 
-class myDetectorData {
+class myVectorData {
 public:
    //-- Example of method...
    void clear();
-
-   //-- Class members
-   //-- initialized by construction, C++11
-   double time = 1;
-   double energy = 2;
-   int detectorID = 3;
+   void CreateEvent();
    std::vector<double> correlatedDetectors_v = {1, 2, 3};
 };
+
+static const std::size_t MAX_SIZE_OF_VECTOR = 666;
+
+class myArrayData {
+public:
+   //-- Example of method...
+   void clear();
+   void CreateEvent();
+   double correlatedDetectors_v[MAX_SIZE_OF_VECTOR] = {1, 2, 3};
+};
+
 
 #endif

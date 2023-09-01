@@ -23,7 +23,7 @@ void readTree()
       std::cerr << " File not found " << std::endl;
       return;
    }
-   if (!TClass::GetClass(typeid(myDetectorData))->IsLoaded()) {
+   if (!TClass::GetClass(typeid(myVectorData))->IsLoaded()) {
       std::cerr << " TClass::GetClass(typeid(std::string))->IsLoaded() == false " << std::endl;
    }
 
@@ -31,15 +31,15 @@ void readTree()
    TTreeReader aReader("myTree", ifile);
 
    // Create TTreeReaderValues for the branches "branch1" and "branch2"
-   TTreeReaderValue<myDetectorData> branch1(aReader, "branch1.");
-   TTreeReaderValue<myDetectorData> branch2(aReader, "branch2.");
+   TTreeReaderValue<myVectorData> branch1(aReader, "branch1.");
+   TTreeReaderValue<myVectorData> branch2(aReader, "branch2.");
 
    // Loop over the entries of the tree
    while (aReader.Next()) {
-      if (branch1->time != 0)
-         std::cerr << " -Branch1 : time: " << branch1->time << "\t energy: " << branch1->energy << std::endl;
-      else if (branch2->time != 0)
-         std::cerr << " +Branch2 : time: " << branch2->time << "\t energy: " << branch2->energy << std::endl;
+      if (branch1->correlatedDetectors_v.size() != 0)
+         std::cerr << " -Branch1 : size: " << branch1->correlatedDetectors_v.size() << std::endl;
+      else if (branch2->correlatedDetectors_v.size() != 0)
+         std::cerr << " -Branch2 : size: " << branch2->correlatedDetectors_v.size() << std::endl;
       else
          std::cerr << "WARNING: entry " << aReader.GetCurrentEntry() << " is empty! " << std::endl;
    }

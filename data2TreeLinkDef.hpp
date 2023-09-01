@@ -8,6 +8,7 @@
 
 #ifdef __CLING__
 
-#pragma link C++ class myDetectorData + ;
+#pragma link C++ class myVectorData + ;
+#pragma link C++ class myArrayData + ;
 
 #endif

@@ -12,9 +12,9 @@ int main()
    writeTree();
    std::cerr << "Starting writeTree()... Done! " << std::endl;
 
-   std::cerr << "Starting readTree()..." << std::endl;
-   readTree();
-   std::cerr << "Starting readTree()... Done! " << std::endl;
+   // std::cerr << "Starting readTree()..." << std::endl;
+   // readTree();
+   // std::cerr << "Starting readTree()... Done! " << std::endl;
 
    return 0;
 }
